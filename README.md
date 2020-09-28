@@ -16,7 +16,7 @@ As you know, there's always room for improvement and you can test your skills by
 
 Here are some examples of other features -
 
-- Add other buttons used for calculator
+- Add more buttons which are usually used in calculator
 - Do calculation when “3	+ 3 +” is pressed
 - Display history of calculation
 - Use class to organize your code
