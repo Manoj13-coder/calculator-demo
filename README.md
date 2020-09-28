@@ -14,7 +14,7 @@ This app has all basic features you would expect from a calculator.
 
 As you know, there's always room for improvement and you can test your skills by adding more features to this app!
 
-Here are some examples of other features -
+Here are some examples -
 
 - Add more buttons which are usually used in calculator
 - Do calculation when “3	+ 3 +” is pressed
