@@ -21,6 +21,8 @@ Here are some examples of other features -
 - Display history of calculation
 - Use class to organize your code
 
+Feel free to add any other features you would like!
+
 # How to contribute?
 
 1. Fork this repository.
