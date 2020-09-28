@@ -6,7 +6,28 @@ Take a moment to think how far your skills have brought you ✨✨✨
 
 We've prepared this sample project for you to use as a starting point and take your skills to the next level!
 
+This app has all basic features you would expect from a calculator.
+
+<img width="311" alt="calculator" src="https://user-images.githubusercontent.com/10005645/94406684-04a87780-0190-11eb-957d-a91c7438b3b0.png">
+
 **Give it a try here: [progate-community.github.io/calculator-demo](https://progate-community.github.io/calculator-demo)**
+
+As you know, there's always room for improvement and you can test your skills by adding more features to this app!
+
+Here are some examples of other features -
+
+- Add other buttons used for calculator
+- Do calculation when “3	+ 3 +” is pressed
+- Display history of calculation
+- Use class to organize your code
+
+# How to contribute?
+
+1. Fork this repository.
+2. Add new features by making changes in the code.
+3. Make a pull request.
+
+[Learn how to fork a repository and make a pull request.](https://guides.github.com/activities/forking/)
 
 # Absolute beginner?
 
