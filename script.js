@@ -68,7 +68,6 @@ clearBtn.addEventListener("click", () => {
 const backspace = document.querySelector(".backspace")
 
 backspace.addEventListener("click", (event) => {
-  backspace.style.backgroundColor = 'rgb(255, 0, 0)';
   currentInput=currentInput.slice(0,-1);
   currentInput=(currentInput=='')?'0':currentInput
   updateScreen(currentInput)
