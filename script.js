@@ -1,5 +1,3 @@
-let prevInput = '0'
-let calculationOperator = ''
 let currentInput = '0'
 
 const inputNumber = (number) => {
@@ -11,50 +9,21 @@ const inputNumber = (number) => {
 }
 
 const inputOperator = (operator) => {
-  if (calculationOperator === '') {
-    prevInput = currentInput
-  }
-  calculationOperator = operator
-  currentInput = '0'
-}
-
-const inputDecimal = (dot) => {
-  if(currentInput.includes('.')) {
-    return
-  }
-  currentInput += dot
-}
-
-const getPercentage = () => {
-  currentInput = currentInput / 100
+  currentInput += operator
 }
 
 const calculate = () => {
   let result = 0
-  switch(calculationOperator) {
-    case '+':
-      result = parseFloat(prevInput) + parseFloat(currentInput)
-      break
-    case '-':
-      result = parseFloat(prevInput) - parseFloat(currentInput)
-      break
-    case '*':
-      result = parseFloat(prevInput) * parseFloat(currentInput)
-      break
-    case '/':
-      result = parseFloat(prevInput) / parseFloat(currentInput)
-      break
-    default:
-      return
+  try {
+    result=eval(currentInput);
+    currentInput = result.toString()
+  } catch (error) {
+    currentInput = 'Error';
+    console.log(error)
   }
-  currentInput = result.toString()
-  calculationOperator = ''
-  prevInput = '0'
 }
 
 const clearAll = () => {
-  prevInput = '0'
-  calculationOperator = ''
   currentInput = '0'
 }
 
@@ -77,12 +46,14 @@ const operators = document.querySelectorAll(".operator")
 operators.forEach((operator) => {
   operator.addEventListener("click", (event) => {
     inputOperator(event.target.value)
+    updateScreen(currentInput)
   })
 })
 
 const equalSign = document.querySelector('.equal-sign')
 
 equalSign.addEventListener("click", () => {
+  equalSign.style
   calculate()
   updateScreen(currentInput)
 })
@@ -94,16 +65,11 @@ clearBtn.addEventListener("click", () => {
   updateScreen(currentInput)
 })
 
-const decimal = document.querySelector(".decimal")
+const backspace = document.querySelector(".backspace")
 
-decimal.addEventListener("click", (event) => {
-  inputDecimal(event.target.value)
-  updateScreen(currentInput)
-})
-
-const percentage = document.querySelector(".percentage")
-
-percentage.addEventListener("click", (event) => {
-  getPercentage()
+backspace.addEventListener("click", (event) => {
+  backspace.style.backgroundColor = 'rgb(255, 0, 0)';
+  currentInput=currentInput.slice(0,-1);
+  currentInput=(currentInput=='')?'0':currentInput
   updateScreen(currentInput)
 })
