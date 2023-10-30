@@ -1,7 +1,7 @@
 .calculator {
   text-align: center;
   margin: 0 auto;
-  padding-top: 200px;
+  padding-top: 100px;
   width: 400px;
 }
 
@@ -40,10 +40,13 @@ button:hover {
   background-color: darkgray;
 }
 
-.all-clear, .zero-btn {
-  width: 50%;
+.all-clear {
+  width: 25%;
 }
 
+.zero-btn {
+  width: 50%;
+}
 .operator, .equal-sign {
   background-color: orange;
 }
